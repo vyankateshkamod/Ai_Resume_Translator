@@ -1,36 +1,93 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI Resume Translator
 
-## Getting Started
+An AI-powered application that seamlessly translates and formats resumes into multiple languages (Spanish, French, German) while preserving the original structure. Built with Next.js, Supabase, and Google Gemini.
 
-First, run the development server:
+## 🚀 Features
+
+- **Upload & Parse**: Supports PDF resume uploads.
+- **Hybrid Translation Pipeline**:
+  - **Translation**: Uses [Lingo.dev](https://lingo.dev/) for high-quality resume translation.
+  - **Formatting**: Uses [Google Gemini](https://ai.google.dev/) to structure the translated text into clean Markdown.
+  - **Auto-Fallback**: Automatically switches to a full Gemini pipeline if Lingo.dev quota is exceeded or fails.
+- **Smart Formatting**: Automatically detects resume sections and reformats them.
+- **Supabase Integration**: Stores original files, translated outputs, and user records.
+- **Multi-language Support**: Translate to Spanish (`es`), French (`fr`), or German (`de`).
+
+## 🛠 Tech Stack
+
+- **Framework**: [Next.js 15+](https://nextjs.org/) (App Router)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Backend & Auth**: [Supabase](https://supabase.com/)
+- **Translation**: [Lingo.dev](https://lingo.dev/)
+- **Formatting**: [Google Gemini](https://ai.google.dev/) (`gemini-flash-latest`)
+- **PDF Processing**: `pdf-parse`
+
+## ⚙️ Requirements
+
+- Node.js (v18 or higher)
+- npm / yarn / pnpm
+- A Supabase project
+- A Lingo.dev API Key
+- A Google Gemini API Key
+
+## 🏗 Setup & Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/Ai_Resume_Translator.git
+   cd Ai_Resume_Translator
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Configure Environment Variables**
+   Create a `.env` file in the root directory based on `.env.example`:
+   ```bash
+   cp .env.example .env
+   ```
+
+   Fill in your API keys:
+   ```env
+   NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+   NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+   LINGODOTDEV_API_KEY=your_lingo_dev_api_key
+   GEMINI_API_KEY=your_gemini_api_key
+   ```
+
+4. **Run the Development Server**
+   ```bash
+   npm run dev
+   ```
+   Open [http://localhost:3000](http://localhost:3000) to view the app.
+
+## 📜 Build & Run
+
+To build the application for production:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To start the production server:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📂 Project Structure
 
-## Learn More
+- `src/app`: App Router pages and API routes.
+- `src/lib`: Utility functions and Supabase client setup.
+- `src/components`: React components.
+- `public`: Static assets.
 
-To learn more about Next.js, take a look at the following resources:
+## 🤝 Contributing
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📄 License
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is licensed under the MIT License.
