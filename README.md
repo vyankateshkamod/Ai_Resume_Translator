@@ -3,7 +3,8 @@
 An AI-powered application that seamlessly translates and formats resumes into multiple languages (Spanish, French, German) while preserving the original structure. Built with Next.js, Supabase, and Google Gemini.
 
 # Demo Video
-https://github.com/vyankateshkamod/Project-Assests/blob/main/Ai_Resume_Translator/Screen%20Recording%202026-02-01%20232812.mp4
+
+https://github.com/user-attachments/assets/00f6afa6-e1df-4520-a5bf-0e2a05b37055
 
 ## 🚀 Features
 
