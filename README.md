@@ -2,6 +2,9 @@
 
 An AI-powered application that seamlessly translates and formats resumes into multiple languages (Spanish, French, German) while preserving the original structure. Built with Next.js, Supabase, and Google Gemini.
 
+# Demo Video
+https://github.com/vyankateshkamod/Project-Assests/blob/main/Ai_Resume_Translator/Screen%20Recording%202026-02-01%20232812.mp4
+
 ## 🚀 Features
 
 - **Upload & Parse**: Supports PDF resume uploads.
@@ -34,7 +37,7 @@ An AI-powered application that seamlessly translates and formats resumes into mu
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/Ai_Resume_Translator.git
+   git clone https://github.com/vyankateshkamod/Ai_Resume_Translator.git
    cd Ai_Resume_Translator
    ```
 
@@ -88,6 +91,4 @@ npm start
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## 📄 License
 
-This project is licensed under the MIT License.
